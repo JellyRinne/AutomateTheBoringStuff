@@ -6,6 +6,8 @@ print('42 % 6 is: ' + str(int(42 % 6)))
 print()
 print('2 ** 3 is: ' + str(int(2 ** 3)))
 print()
+print('(5-1) * ((7 + 1) / (3 - 1))' ' = ' + str(int((5-1) * ((7 + 1) / (3 - 1)))))
+print()
 
 spam = 'Hello,'
 eggs = ' World!'
@@ -15,10 +17,13 @@ waffles = 4
 waffles = waffles + 8
 breakfast = spam + eggs + ' Peter is ' + str(waffles) + ' apples tall. '
 print(breakfast)
+
 print('\nNewlines can be more efficient than "print()", try "\\n"!')
+
 breakfast = '\n' + breakfast
 print(breakfast * 3)
-print('\n(5-1) * ((7 + 1) / (3 - 1))' ' = ' + str(int((5-1) * ((7 + 1) / (3 - 1)))))
+
+
 print('\nPython variable rules:')
 print('1. It can only be one "word" with no spaces.')
 print('2. It can only use letters, numbers, and underscores.') 
