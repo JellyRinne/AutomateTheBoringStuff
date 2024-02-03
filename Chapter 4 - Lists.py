@@ -98,3 +98,127 @@ def listspam9():
         print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
 
 listspam9()
+
+print()
+
+def listspam10():
+    spam = []
+    while True:
+        print('Enter the species of animal ' + str(len(spam) + 1) + ' (Or enter nothing to stop.):')
+        name = input()
+        if name == '':
+            break
+        spam = spam + [name] #add the cat to the list
+    print('Is there a cat?')
+    if 'cat' in spam:
+        print('Yes')
+    elif 'cat' not in spam:
+        print('No')
+    else:
+        print('I can\'t tell???')
+
+listspam10()
+
+print()
+
+def listspam11():
+    cat = ['fat', 'gray', 'loud']
+    size, color, disposition = cat
+    print('The cat\'s size is: ' + size)
+    print('The cat\'s color is: ' + color)
+    print('The cat\'s disposition is: ' + disposition)
+
+listspam11()
+
+print()
+
+def listspam12():
+    supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
+    for index, item in enumerate(supplies):
+        print('Index ' + str(index) + ' in supplies is: ' + item)
+
+listspam12()
+
+print()
+
+def listspam13():
+    import random
+    pets = ['cats', 'dogs', 'rats']
+    print('The best pets are ' + random.choice(pets))
+    random.shuffle(pets)
+    print('But my favorite pets are: ' + str(pets))
+
+listspam13()
+
+print()
+
+def listspam14():
+    print('"spam += 1" is the same as "spam = spam + 1"')
+    print('"spam -= 1" is the same as "spam = spam - 1"')
+    print('"spam *= 1" is the same as "spam = spam * 1"')
+    print('"spam /= 1" is the same as "spam = spam / 1"')
+    print('"spam %= 1" is the same as "spam = spam % 1"')
+    spam = 'Hello, '
+    spam += 'World!'
+    print(spam)
+    bacon = ['ham']
+    bacon *= 3
+    print(bacon)
+
+listspam14()
+
+print()
+
+def listspam15():
+    spam = ['ham', 'bacon', 'eggs']
+    extraProteins = ['sausage', 'steak', 'tofu']
+    spam.insert(3, 'toast')
+    i = 0
+    for index, protein in enumerate(spam):
+        print('The index of \'' + protein + '\' is: ' + str(spam.index(protein)))
+        if i < len(extraProteins):
+            spam.append(extraProteins[i])
+            i += 1
+            spam.remove(spam[0])        
+
+listspam15()
+
+print()
+
+def listspam16():
+    spam = [2, 5, 3.14,
+                                     1, 
+                -7]
+    print(str(spam) + ' sorted is:')
+    spam.sort()
+    print(spam)
+    print()
+    spam2 = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+    print(str(spam2) + ' sorted backwards is:')
+    spam2.sort(reverse=True) #ASCIIbetical sort
+    print(spam2)
+    print()
+    print(str(spam) + ' sorted backwards is:')
+    spam.reverse()
+    print(spam)
+
+listspam16()
+
+print()
+
+def listspam17():
+    import random
+    messages = ['It is certain',
+                'Yes definitely',
+                'Reply hazy, try again',
+                'Ask again later',
+                'Concentrate and ask again',
+                'My reply is no',
+                'Outlook not so good',
+                'Very doubtful']
+    print(messages[random.randint(0, len(messages) - 1)])
+
+listspam17()
+
+print()
+
