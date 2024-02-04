@@ -222,3 +222,134 @@ listspam17()
 
 print()
 
+def listspam18():
+    name = 'Roger Persona'
+    for i in name: #strings are lists!
+        print('***' + i + '***')
+
+listspam18()
+
+print()
+
+def listspam19():
+    name = 'John Persona'
+    newName = name[0:4] + ' the ' + name[5:12]
+    print(newName)
+
+listspam19()
+
+print()
+
+def listspam20(): #tuple, actually
+    eggs = ('hello', 42, 0.5) #immutable values in an immutable list, faster than lists too
+    spam = ('spam',) #comma denotes tuple with single value
+    bacon = 'ham'
+    print(bacon)
+    print(tuple(bacon))
+    print(list(bacon))
+
+listspam20()
+
+print()
+
+def listspam21(): #lists aren't quite like other data types...
+    spam = 42
+    cheese = spam
+    spam = 100
+    print(cheese)
+    #vs
+    bacon = [0, 1, 2, 3, 4, 5]
+    eggs = bacon
+    bacon[1] = 24
+    print(eggs)
+
+listspam21()
+
+print()
+
+def listspam22():
+    print(id('howdy!'))
+
+listspam22()
+
+print()
+
+def listspam23(someParameter):
+    someParameter.append('Hello!')
+
+spam = [1, 2, 3]
+listspam23(spam)
+print(spam)
+
+print()
+
+def listspam24():
+    import copy
+    bacon = [1, 2, 3, 4]
+    print(str(bacon) + ' ID:')
+    print(id(bacon))
+    eggs = bacon
+    print('eggs is a reference to bacon: ' + str(eggs) + ' and its ID is:')
+    print(id(eggs))
+    spam = ['A', 'B', 'C', 'D',]
+    print(str(spam) + ' ID:')
+    print(id(spam))
+    cheese = copy.copy(spam) #copy.deepcopy() is necessary for lists that contains lists
+    print('cheese is a copy of spam: ' + str(cheese) + ' and its ID is:')
+    print(id(cheese))
+
+listspam24()
+
+#Practice Questions:
+
+#1.
+#An empty list
+
+#2. 
+#spam[2] = 'hello'
+
+#3.
+#'d'
+
+#4.
+#'d'
+
+#5.
+#'a', 'b'
+
+#6.
+#1
+
+#7.
+#[3.14, 'cat', 11, 'cat, True, 99]
+
+#8.
+#[3.14, 11, 'cat', True]
+
+#9.
+#+, *
+
+#10.
+#append adds a value to the end of a list, insert takes an integer for the index of where to insert the chosen value
+
+#11.
+# del * .remove()
+
+#12.
+#a string is a list of characters and a list is a string of values
+
+#13.
+#lists are mutable, tuples are not
+
+#14.
+#spam = (42,)
+
+#15.
+#tuple(listName)
+#list(tupleName)
+
+#16.
+#references to the list
+
+#17.
+#copy will not copy the values of lists within lists, deepcopy will
