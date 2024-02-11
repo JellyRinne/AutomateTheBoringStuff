@@ -111,3 +111,47 @@ def turn():
 turn()
 
 print()
+
+allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+             'Bob': {'ham sandwiches': 3, 'apples': 2},
+             'Carol': {'cups': 3, 'apple pies': 1}}
+
+def totalBrought(guests, item):
+    numBrought = 0
+    for k, v in guests.items():
+        numBrought = numBrought + v.get(item, 0)
+    return numBrought
+
+print('Number of things being brought:')
+print(' - Apples           ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups             ' + str(totalBrought(allGuests, 'cups')))
+print(' - Cakes            ' + str(totalBrought(allGuests, 'cakes')))
+print(' - Ham Sandwiches   ' + str(totalBrought(allGuests, 'ham sandwiches')))
+print(' - Apple Pies       ' + str(totalBrought(allGuests, 'apple pies')))
+
+#Practice Questions
+
+#1.
+#spam = {}
+
+#2.
+#spam = {'foo': 42}
+
+#3.
+#a list's values are not keyed. they lack context and the ability to reference them by name. 
+#dictionaries have these features.
+
+#4.
+#NameError - name is not defined
+
+#5.
+#no difference
+
+#6.
+#"'cat' in spam" only checks keys. "'cat' in spam.values()" will check values instead
+
+#7.
+#spam.setDefault('color', black)
+
+#8.
+#pprint.pprint()
