@@ -138,3 +138,120 @@ stringspam7()
 
 print()
 
+def stringspam8():
+    spam = 'Hello, world!'
+    print(spam.startswith('Hello'))
+    print(spam.endswith('world!'))
+    print(spam.startswith('Hello, world!'))
+    print(spam.endswith('Hello, world!'))
+
+stringspam8()
+
+print()
+
+def stringspam9():
+    spam = ', '
+    bacon = ' '
+    toast = 'ABC'
+    eggs = ['cats', 'rats', 'bats']
+    
+    print(spam.join(eggs))
+    print(bacon.join(eggs))
+    print(toast.join(eggs))
+
+stringspam9()
+
+print()
+
+def stringspam10():
+    spam = 'My name is jelly'
+    print(spam.split())
+    print(spam.split(', '))
+    print(spam.split('m'))
+
+    print()
+
+    spam = '''Dear Alice,
+How have you been? I am fine.
+There is a container in the fridge
+that is labeled "milk experiment."
+
+Do not drink it.
+Sincerely,
+Bob'''
+
+    print(spam.split('\n'))
+
+stringspam10()
+
+print()
+
+def stringspam11():
+    spam = 'Hello, world!'
+    print(spam.partition('w'))
+    print(spam.partition('world'))
+    before, sep, after = spam.partition(' ')
+    print(before)
+    print(sep)
+    print(after)
+
+stringspam11()
+
+print()
+
+def stringspam12():
+    spam = 'Hello'
+    eggs = 'Hello, world!'
+    
+    print(spam.rjust(10))
+    print(spam.rjust(20))
+    print(eggs.rjust(20))
+    print(spam.ljust(10, '-'))
+    print(spam.rjust(10, '-'))
+    print(spam.center(30, '*'))
+    print(eggs.center(30, '*'))
+
+stringspam12()
+
+print()
+
+def printPicnic(itemsDict, leftWidth, rightwidth):
+    print('Picnic Items'.center(leftWidth + rightwidth, '-'))
+    for k, v in itemsDict.items():
+        print(k.ljust(leftWidth, '.') + str(v).rjust(rightwidth))
+
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+print()
+printPicnic(picnicItems, 20, 6)
+
+print()
+
+def stringspam13():
+    spam = '    Hello, world!    '
+    print(spam.strip())
+    print(spam.lstrip())
+    print(spam.rstrip())
+    
+    print()
+
+    eggs = 'SpamSpamBaconSpamEggsSpamSpam'
+    print(eggs.strip('ampS'))
+    print(eggs.strip('mapS'))
+    print(eggs.strip('Sapm'))
+
+stringspam13()
+
+print()
+
+def stringspam14():
+    print(ord('A'))
+    print(ord('4'))
+    print(ord('!'))
+    print(chr(65))
+    print(chr(52))
+    print(chr(33))
+    print(chr((ord('A') +1)))
+
+stringspam14()
+
